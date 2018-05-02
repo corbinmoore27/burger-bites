@@ -2,24 +2,25 @@
 
 <h2>Order Up!</h2>
 
-<ul>
+<ol>
   {{#each burgers}}
-    <li>
-	{{burger_name}}
+    {{#unless devoured}} {{burger_name}}
+  <li>
 
-	<button class="change-devour" data-id="{{id}}">
-		{{#if devoured}}{{else}}Devour It!{{/if}}
-	</button>
-</li>
+    <button class="change-devour" data-id="{{id}}">
+      Devour It!
+    </button>
+  </li>
+    {{/unless}}
   {{/each}}
-</ul>
+</ol>
 
 <ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{!}}
-    {{/if}}
-  {{/each}}
+  {{#each burgers}} {{#if devoured}}
+  <li>
+    {{burger_name}}
+  </li>
+  {{/if}} {{/each}}
 </ul>
 
 
