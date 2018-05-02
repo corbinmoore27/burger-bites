@@ -1,0 +1,34 @@
+<h1>Burger Bites!</h1>
+
+<h2>Order Up!</h2>
+
+<ul>
+  {{#each burgers}}
+    <li>
+	{{burger_name}}
+
+	<button class="change-devour" data-id="{{id}}">
+		{{#if devoured}}{{else}}Devour It!{{/if}}
+	</button>
+</li>
+  {{/each}}
+</ul>
+
+<ul>
+  {{#each burgers}}
+    {{#if devoured}}
+      {{!}}
+    {{/if}}
+  {{/each}}
+</ul>
+
+
+<h2>Enter your burger order here!</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <input type="text" id="bg" name="burger_name">
+  </div>
+
+  <button type="submit">Submit</button>
+</form>

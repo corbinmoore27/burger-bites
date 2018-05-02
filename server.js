@@ -9,7 +9,7 @@ var app = express();
 app.use(express.static("public"));
 
 // parse application
-app.use(bodyParser.urlencoded({ extended: trus}));
+app.use(bodyParser.urlencoded({ extended: true}));
 
 //parse application/json
 app.use(bodyParser.json());
@@ -27,5 +27,5 @@ app.use(routes);
 
 //Start up the server
 app.listen(PORT, function() {
-    consol.log("Server listening on: http://localhost:" + PORT);
+    console.log("Server listening on: http://localhost:" + PORT);
 });
