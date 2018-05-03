@@ -1,0 +1,12 @@
+body {
+  background-color: blanchedalmond
+}
+h1, h2, form {
+  text-align: center
+}
+ul {
+  float: right
+}
+ol {
+  float: left
+}
